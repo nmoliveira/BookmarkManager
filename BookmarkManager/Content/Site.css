@@ -1,0 +1,10 @@
+﻿ body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+#bookmarks { list-style-type: none; margin: 0; padding: 0; }
+#bookmarks li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 260px; height: 310px; }

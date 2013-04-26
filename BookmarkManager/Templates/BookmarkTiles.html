@@ -1,0 +1,29 @@
+﻿<script id="BookmarkList" type="text/x-jquery-tmpl">
+<li class="ui-state-default">
+     <div class="well" style="float:left;width:250px; height: 300px; margin:5px;padding:5px;">
+        <div class="btn-group" style="position:relative;bottom:0">
+            <input type="hidden" id="bmTileId${BookmarkId}" name="bmTileId${BookmarkId}" />
+            <input type="button" class="btn" id="btnEdit${BookmarkId}" name="btnEdit${BookmarkId}" value="Edit" />        
+            <input type="button" class="btn" id="btnDel${BookmarkId}" name="btnDel${BookmarkId}" value="Delete" />
+        </div>
+        <br>
+        <div>
+          <strong>Title:</strong>
+          <label>${BookmarkTitle}</label>
+          <strong>Url:</strong>
+          <br /> <a href="${BookmarkUrl}" target="_blank">${BookmarkUrl}</a> <br />
+          <strong>Description:</strong>
+          <label>${BookmarkDescription}</label>
+          <strong>Rating:</strong>
+          <label>${BookmarkRating}</label>
+          <strong>Tags:</strong>
+          {{each BookmarkTags}}                              
+            ${$value}
+            <input type="button"  class="btn btn-link" id="DelTag${$value}&${BookmarkId}"
+                name="btnDelTag${$value}&${BookmarkId}" value="X"/>
+          {{/each}}
+        </div>               
+</li>
+
+
+</script>

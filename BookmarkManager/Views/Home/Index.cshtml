@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Bookmark Manager";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        startup.init();
+    });
+</script>
+
+<div class="alert alert-success fade in hide" style="position:fixed; width:300px; margin-left:40%; margin-right:40%; text-align:center">
+  Operation finished successfuly. <a class="close" href="#">&times;</a>
+</div>
+
+<div class="alert alert-error fade in hide" style="position:fixed; width:300px; margin-left:40%; margin-right:40%; text-align:center">
+  An error ocurred, try again please. <a class="close" href="#">&times;</a>
+</div>
+
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+       <a class="brand" href="../">BookmarkManager</a>
+     </div>
+   </div>
+ </div>
+
+<div class="class="container-fluid">
+    <div class="row-fluid">
+        <div id="editBookmark" class="span3" style="padding:5px;">
+            <form style="position:fixed; margin-left:25px">
+            <legend>Bookmark</legend>
+            <input type="hidden" id="bmId" name="bmId" value="" />
+            <label>
+                Title: *</label>
+            <input type="text" id="bmTitle" name="bmTitle" placeholder="Bookmark title..." />
+            <label>
+                Url: *</label>
+            <input type="text" id="bmUrl" name="bmUrl" placeholder="Bookmark url..." />
+            <label>
+                Description:</label>
+            <textarea id="bmDescription" rows="5" cols="25" name="bmDescription" placeholder="Bookmark description..."></textarea>
+            <label>
+                Rating:</label>
+            <input type="text" id="bmRating" name="bmRating" placeholder="Bookmark rating..." />
+            <label>
+                Tag:</label>
+            <input type="text" id="bmTag" name="bmTag" placeholder="Add tag..." />
+            <div id="bmTags">
+            </div>
+            <br />            
+            <input type="button" class="btn" id="btnSave" name="btnSave" value="Save"/>            
+            </form>
+        </div>
+        <div class="span9">
+            <button type="submit" class="btn" id="btnSaveBookmarksLayout" name="btnSaveBookmarksLayout">
+                Save layout</button>
+            <ul id="bookmarks">
+            </ul>            
+        </div>
+    </div>
+</div>
