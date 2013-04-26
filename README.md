@@ -10,6 +10,7 @@ This project was created by me to learn some new technologies and patterns.
 - ASP.net MVC
 - Entity Framework Code First
 - HTML5
+- Twitter Bootstrap
 - jQuery
 - JSON
 - AJAX
